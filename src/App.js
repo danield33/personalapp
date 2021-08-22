@@ -1,4 +1,5 @@
 import './App.css';
+import Item from './Components/Item'
 
 import React, {Component} from 'react';
 
@@ -28,7 +29,7 @@ class App extends Component {
             <div className="App">
 
                     {
-                        this.state.items.map((item, index) => <p key={index}>{item}</p>)
+                        this.state.items.map((item, index) => <Item key={index} text={item}/>)
                     }
 
                 <form className={"flexRow"} onSubmit={this.handleSubmit}>
